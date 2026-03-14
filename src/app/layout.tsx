@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${interTight.variable} antialiased`}>
         <AppContextProvider>
-          <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
             <Suspense>
               <SmoothScrollProvider>{children}</SmoothScrollProvider>
             </Suspense>
