@@ -35,10 +35,7 @@ export const metadata: Metadata = {
 const Homepage = () => {
   return (
     <Fragment>
-      <NavbarThree
-        className="bg-white dark:bg-background-5"
-        btnClassName="btn-secondary hover:btn-primary dark:btn-accent"
-      />
+      <NavbarThree btnClassName="btn-secondary hover:btn-primary dark:btn-accent" />
       <main className="bg-white dark:bg-background-7">
         <Hero />
         <Services />
