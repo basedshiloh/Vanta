@@ -6,7 +6,7 @@ import HeroLineGradient from './HeroLineGradient';
 const Hero = () => {
   return (
     <RevealAnimation delay={0.1}>
-      <section className="md:pt-[200px] pt-[150px] bg-background-3 dark:bg-background-7 relative z-10 overflow-hidden">
+      <section className="md:pt-[200px] pt-[150px] bg-background-3 dark:bg-black relative z-10 overflow-hidden">
         <HeroLineGradient />
         <div className="main-container">
           <div>
