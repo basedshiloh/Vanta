@@ -7,7 +7,7 @@ import Services22 from '@/components/homepage-22/Services';
 import Steps from '@/components/homepage-22/Steps';
 import Testimonial from '@/components/homepage-33/Testimonial';
 import FooterThree from '@/components/shared/footer/FooterThree';
-import NavbarTwo from '@/components/shared/header/NavbarOne';
+import NavbarTwo from '@/components/shared/header/NavbarTwo';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 import { Fragment } from 'react';
