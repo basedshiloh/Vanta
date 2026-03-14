@@ -1,12 +1,12 @@
 'use client';
 
+import CircularReveal from '@/components/animation/CircularReveal';
 import { useMobileMenuContext } from '@/context/MobileMenuContext';
-import { gsap } from 'gsap';
 import vantaDarkLogo from '@public/images/shared/vanta-dark-logo.svg';
 import vantaLightLogo from '@public/images/shared/vanta-light-logo.svg';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useLayoutEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import AboutUsMenu from './mobile-menu/AboutUsMenu';
 import BlogMenu from './mobile-menu/BlogMenu';
 import FeaturesMenu from './mobile-menu/FeaturesMenu';
@@ -24,34 +24,6 @@ const MobileMenu = () => {
   const { isOpen, closeMenu } = useMobileMenuContext();
   const sidebarRef = useRef<HTMLElement>(null);
 
-  // Set initial clip-path when closed (avoids flash on mount)
-  useLayoutEffect(() => {
-    const menu = sidebarRef.current;
-    if (menu) {
-      gsap.set(menu, { clipPath: 'circle(0% at 100% 0%)' });
-    }
-  }, []);
-
-  // GSAP circular reveal animation
-  useEffect(() => {
-    const menu = sidebarRef.current;
-    if (!menu) return;
-
-    if (isOpen) {
-      gsap.to(menu, {
-        clipPath: 'circle(200% at 100% 0%)',
-        duration: 0.8,
-        ease: 'power2.inOut',
-      });
-    } else {
-      gsap.to(menu, {
-        clipPath: 'circle(0% at 100% 0%)',
-        duration: 0.6,
-        ease: 'power2.in',
-      });
-    }
-  }, [isOpen]);
-
   // Handle click outside to close menu
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -67,10 +39,14 @@ const MobileMenu = () => {
   }, [isOpen, closeMenu]);
 
   return (
-    <aside
+    <CircularReveal
+      as="aside"
       ref={sidebarRef}
-      className="dark:bg-background-7 scroll-bar fixed top-0 right-0 z-[999] h-screen w-full bg-white sm:w-1/2 xl:hidden"
-      style={{ pointerEvents: isOpen ? 'auto' : 'none' }}>
+      isOpen={isOpen}
+      origin="top-right"
+      openDuration={0.8}
+      closeDuration={0.6}
+      className="dark:bg-background-7 scroll-bar fixed top-0 right-0 z-[999] h-screen w-full bg-white sm:w-1/2 xl:hidden">
       <div className="space-y-4 p-5 sm:p-8 lg:p-9">
         <div className="flex items-center justify-between">
           <Link href="/">
@@ -118,7 +94,7 @@ const MobileMenu = () => {
           </ul>
         </div>
       </div>
-    </aside>
+    </CircularReveal>
   );
 };
 
