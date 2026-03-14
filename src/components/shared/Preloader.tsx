@@ -53,7 +53,7 @@ const Preloader = ({ onComplete }: PreloaderProps) => {
         centerLogoRef.current,
         {
           scale: 50,
-          yPercent: 50,
+          y: '40vh',
           opacity: 0.25,
           duration: 1,
           ease: 'power2.inOut',
