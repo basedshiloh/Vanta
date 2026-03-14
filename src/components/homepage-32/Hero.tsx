@@ -14,14 +14,13 @@ const Hero = () => {
               <RevealAnimation delay={0.2}>
                 <h1 className="xl:max-w-[846px] md:max-w-[600px] sm:max-w-[450px] max-w-[350px] mx-auto leading-[1.2]">
                   <span className="hero-text-gradient hero-text-color-1 block">
-                    Transform your data into clear insights.
+                  Trade Faster. Trade Smarter. With Commands.
                   </span>
                 </h1>
               </RevealAnimation>
               <RevealAnimation delay={0.3}>
                 <p className="md:max-w-[818px] sm:max-w-[600px] max-w-[450px] mx-auto">
-                  NextSaaS helps businesses of all sizes visualize, understand, and share data with stunning dashboards,
-                  real-time reports, and powerful analytics—without complex setup or code.
+                Trade faster with Vanta, a command-based trading bot built for speed. Execute buy, sell, and limit orders instantly with simple commands.
                 </p>
               </RevealAnimation>
             </div>
@@ -31,7 +30,7 @@ const Hero = () => {
                   <LinkButton
                     href="/our-services-01"
                     className="btn btn-primary hover:btn-secondary dark:hover:btn-accent btn-lg md:btn-xl md:w-auto w-[90%] mx-auto md:mx-0">
-                    Take a product tour
+                    Start Trading
                   </LinkButton>
                 </li>
               </RevealAnimation>
@@ -40,7 +39,7 @@ const Hero = () => {
                   <LinkButton
                     href="/contact-us"
                     className="btn btn-white dark:btn-white-dark hover:btn-primary btn-lg md:btn-xl md:w-auto w-[90%] mx-auto md:mx-0">
-                    Get started now
+                    Learn More
                   </LinkButton>
                 </li>
               </RevealAnimation>
@@ -83,7 +82,7 @@ const Hero = () => {
               <RevealAnimation delay={1.0} direction="right">
                 <div className="sm:text-left text-center">
                   <p className="text-tagline-2 font-medium text-secondary dark:text-accent">Join 36,000+</p>
-                  <p className="text-tagline-3">Use NextSaaS for smarter decisions.</p>
+                  <p className="text-tagline-3">Use Vanta for faster execution.</p>
                 </div>
               </RevealAnimation>
             </div>
