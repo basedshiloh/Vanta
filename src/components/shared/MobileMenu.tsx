@@ -40,13 +40,13 @@ const MobileMenu = () => {
     if (isOpen) {
       gsap.to(menu, {
         clipPath: 'circle(200% at 100% 0%)',
-        duration: 0.5,
+        duration: 0.8,
         ease: 'power2.inOut',
       });
     } else {
       gsap.to(menu, {
         clipPath: 'circle(0% at 100% 0%)',
-        duration: 0.4,
+        duration: 0.6,
         ease: 'power2.in',
       });
     }
