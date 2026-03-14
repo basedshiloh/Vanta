@@ -16,7 +16,7 @@ const Logo = () => {
         </figure>
 
         {/* mobile logo */}
-        <figure className="block max-w-[120px] lg:hidden">
+        <figure className="block size-11 lg:hidden">
           <Image src={vantaLightLogoMobile} alt="Vanta Trading Bot" className="block w-full dark:hidden" />
           <Image src={vantaDarkLogoMobile} alt="Vanta Trading Bot" className="hidden w-full dark:block" />
         </figure>
