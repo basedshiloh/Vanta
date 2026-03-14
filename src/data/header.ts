@@ -22,9 +22,8 @@ export const navigationItems: NavigationItem[] = [
   {
     id: 'home',
     label: 'Home',
-    href: '#',
-    hasDropdown: true,
-    megaMenuComponent: 'HomeMegaMenu',
+    href: '/',
+    hasDropdown: false,
   },
   {
     id: 'pages',
