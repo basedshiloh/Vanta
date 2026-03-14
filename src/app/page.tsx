@@ -3,6 +3,7 @@ import Feature from '@/components/homepage-22/Feature';
 import FeatureV2 from '@/components/homepage-22/FeatureV2';
 import Hero from '@/components/homepage-32/Hero';
 import Services from '@/components/homepage-22/Services';
+import Services32 from '@/components/homepage-32/Services';
 import Steps from '@/components/homepage-22/Steps';
 import Testimonial from '@/components/homepage-33/Testimonial';
 import FooterThree from '@/components/shared/footer/FooterThree';
@@ -25,6 +26,7 @@ const Homepage = () => {
       />
       <main className="bg-white dark:bg-background-7">
         <Hero />
+        <Services32 />
         <Steps />
         <Feature />
         <FeatureV2 />
