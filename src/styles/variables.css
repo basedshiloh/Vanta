@@ -5,15 +5,15 @@ All the varaiables are added here
   /* =============== FONTS =============== */
   --font-inter-tight: 'Inter Tight', sans-serif;
   /* =============== COLORS =============== */
-  --color-primary-50: #f4f2fe;
-  --color-primary-100: #ece8ff;
-  --color-primary-200: #dcd4ff;
-  --color-primary-300: #c3b1ff;
-  --color-primary-400: #a585ff;
-  --color-primary-500: #864ffe;
-  --color-primary-600: #7c31f6;
-  --color-primary-700: #6d1fe2;
-  --color-primary-800: #5a19be;
+  --color-primary-50: #eef3fd;
+  --color-primary-100: #dfe6fb;
+  --color-primary-200: #aebff4;
+  --color-primary-300: #7e98ec;
+  --color-primary-400: #1a4bd3;
+  --color-primary-500: #163fb3;
+  --color-primary-600: #113391;
+  --color-primary-700: #0d2a7a;
+  --color-primary-800: #0a2163;
   --color-secondary: #1a1a1c;
   --color-accent: #fcfcfc;
   --color-split-text: #1a1a1c;
@@ -46,18 +46,18 @@ All the varaiables are added here
   --color-ns-cyan-light: #cdf5f8;
   --color-ns-yellow-light: #fdf7bc;
 
-  --color-gradient-1: linear-gradient(135deg, #a585ff 0%, #ffc2ad 100%);
+  --color-gradient-1: linear-gradient(135deg, #1a4bd3 0%, #ffc2ad 100%);
   --color-gradient-2: linear-gradient(135deg, #f9eb57 0%, #f99988 100%);
   --color-gradient-3: linear-gradient(135deg, #83e7ee 0%, #f9eb57 100%);
-  --color-gradient-4: linear-gradient(135deg, #864ffe 0%, #23eed6 100%);
+  --color-gradient-4: linear-gradient(135deg, #1a4bd3 0%, #23eed6 100%);
   --color-gradient-5: linear-gradient(165deg, rgba(255, 255, 255, 0.5) 0.51%, rgba(255, 255, 255, 0) 64.43%);
   --color-gradient-6: linear-gradient(#83e7ee 0%, #c6f56f 100%);
   --color-gradient-7: linear-gradient(#ffffff 0%, #83e7ee 100%);
-  --color-gradient-8: linear-gradient(156deg, #ffffff 32.92%, #a585ff 91%);
+  --color-gradient-8: linear-gradient(156deg, #ffffff 32.92%, #1a4bd3 91%);
   --color-gradient-9: linear-gradient(156deg, #dfb0ff 32.92%, #fdbedc 91%);
   --color-gradient-10: linear-gradient(135deg, #83e7ee 0%, #c6f56f 100%);
   --color-gradient-11: linear-gradient(179deg, rgba(255, 255, 255, 0) 0.68%, #fff 79.47%);
-  --color-gradient-12: radial-gradient(73.01% 80.77% at 19.23% 47.79%, #83e7ee 0%, rgba(134, 79, 254, 0) 100%);
+  --color-gradient-12: radial-gradient(73.01% 80.77% at 19.23% 47.79%, #83e7ee 0%, rgba(26, 75, 211, 0) 100%);
   /* =============== TYPOGRAPHY =============== */
   --text-heading-1: 4.25rem;
   --text-heading-1--line-height: 110%;
