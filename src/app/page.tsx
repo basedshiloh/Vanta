@@ -14,7 +14,22 @@ import { Fragment } from 'react';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Vanta - NextSaaS',
+  title: 'Vanta Trading Bot',
+  description:
+    'Vanta Bot - A chat-native, command-based crypto trading bot on Telegram. Execute trades instantly with simple text commands.',
+  openGraph: {
+    ...defaultMetadata.openGraph,
+    title: 'Vanta Trading Bot',
+    siteName: 'Vanta Trading Bot',
+    description:
+      'Vanta Bot - A chat-native, command-based crypto trading bot on Telegram. Execute trades instantly with simple text commands.',
+  },
+  twitter: {
+    ...defaultMetadata.twitter,
+    title: 'Vanta Trading Bot',
+    description:
+      'Vanta Bot - A chat-native, command-based crypto trading bot on Telegram. Execute trades instantly with simple text commands.',
+  },
 };
 
 const Homepage = () => {
