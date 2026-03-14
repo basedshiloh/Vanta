@@ -1,3 +1,4 @@
+import PreloaderProvider from '@/components/shared/PreloaderProvider';
 import SmoothScrollProvider from '@/components/shared/SmoothScroll';
 import { ThemeProvider } from '@/components/shared/ThemeProvider';
 import { AppContextProvider } from '@/context/AppContext';
@@ -21,9 +22,11 @@ export default function RootLayout({
       <body className={`${interTight.variable} antialiased`}>
         <AppContextProvider>
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-            <Suspense>
-              <SmoothScrollProvider>{children}</SmoothScrollProvider>
-            </Suspense>
+            <PreloaderProvider>
+              <Suspense>
+                <SmoothScrollProvider>{children}</SmoothScrollProvider>
+              </Suspense>
+            </PreloaderProvider>
           </ThemeProvider>
         </AppContextProvider>
       </body>
