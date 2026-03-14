@@ -48,13 +48,13 @@ const Preloader = ({ onComplete }: PreloaderProps) => {
         '-=0.2',
       );
 
-      // Phase 2: Zoom black logo first (scale fully before fade)
+      // Phase 2: Zoom black logo until it covers the full screen, then fade
       tl.to(
         centerLogoRef.current,
         {
-          scale: 18,
-          opacity: 0.2,
-          duration: 0.9,
+          scale: 50,
+          opacity: 0.25,
+          duration: 1,
           ease: 'power2.inOut',
         },
         '-=0.1',
