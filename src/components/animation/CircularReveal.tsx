@@ -37,7 +37,7 @@ interface CircularRevealProps {
   /** Whether to disable pointer events when closed */
   disablePointerWhenClosed?: boolean;
   /** HTML element type for the wrapper */
-  as?: keyof JSX.IntrinsicElements;
+  as?: 'div' | 'aside' | 'section' | 'main' | 'article';
 }
 
 const CircularReveal = forwardRef<HTMLElement, CircularRevealProps>(({
