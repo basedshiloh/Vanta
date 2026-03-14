@@ -7,7 +7,7 @@ import Services22 from '@/components/homepage-22/Services';
 import Steps from '@/components/homepage-22/Steps';
 import Testimonial from '@/components/homepage-33/Testimonial';
 import FooterThree from '@/components/shared/footer/FooterThree';
-import NavbarThree from '@/components/shared/header/NavbarThree';
+import NavbarFour from '@/components/shared/header/NavbarFour';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 import { Fragment } from 'react';
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 const Homepage = () => {
   return (
     <Fragment>
-      <NavbarThree btnClassName="btn-secondary hover:btn-primary dark:btn-accent" />
+      <NavbarFour className="bg-white dark:bg-background-5" btnClassName="btn-secondary hover:btn-primary dark:btn-accent" />
       <main className="bg-white dark:bg-background-7">
         <Hero />
         <Services />
