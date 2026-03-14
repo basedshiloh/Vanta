@@ -48,11 +48,12 @@ const Preloader = ({ onComplete }: PreloaderProps) => {
         '-=0.2',
       );
 
-      // Phase 2: Zoom black logo; trigger fade when about to fill (overlap)
+      // Phase 2: Zoom black logo (shift down 50% vertically as it scales); fade earlier
       tl.to(
         centerLogoRef.current,
         {
           scale: 50,
+          yPercent: 50,
           opacity: 0.25,
           duration: 1,
           ease: 'power2.inOut',
@@ -60,7 +61,7 @@ const Preloader = ({ onComplete }: PreloaderProps) => {
         '-=0.1',
       );
 
-      // Fade background to black (starts ~0.4s before scale ends, faster)
+      // Fade background to black (starts earlier, ~0.6s before scale ends)
       tl.to(
         containerRef.current,
         {
@@ -68,7 +69,7 @@ const Preloader = ({ onComplete }: PreloaderProps) => {
           duration: 0.35,
           ease: 'power2.inOut',
         },
-        '-=0.4',
+        '-=0.6',
       );
 
       // Phase 3: Hide zoomed logo, show white logo then quote
