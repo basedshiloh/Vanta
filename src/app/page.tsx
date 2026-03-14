@@ -4,7 +4,7 @@ import FeatureV2 from '@/components/homepage-22/FeatureV2';
 import Hero from '@/components/homepage-32/Hero';
 import Services from '@/components/homepage-22/Services';
 import Steps from '@/components/homepage-22/Steps';
-import Testimonial from '@/components/homepage-22/Testimonial';
+import Testimonial from '@/components/homepage-33/Testimonial';
 import FooterThree from '@/components/shared/footer/FooterThree';
 import NavbarOne from '@/components/shared/header/NavbarOne';
 import { defaultMetadata } from '@/utils/generateMetaData';
