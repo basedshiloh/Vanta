@@ -2,8 +2,8 @@
 
 import { useMobileMenuContext } from '@/context/MobileMenuContext';
 import { cn } from '@/utils/cn';
-import logoDark from '@public/images/shared/logo-dark.svg';
-import logo from '@public/images/shared/logo.svg';
+import vantaDarkLogo from '@public/images/shared/vanta-dark-logo.svg';
+import vantaLightLogo from '@public/images/shared/vanta-light-logo.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
@@ -49,8 +49,8 @@ const MobileMenu = () => {
           <Link href="/">
             <span className="sr-only">Home</span>
             <figure className="max-w-[44px]">
-              <Image src={logo} alt="NextSaaS" className="block w-full dark:hidden" />
-              <Image src={logoDark} alt="NextSaaS" className="hidden w-full dark:block" />
+              <Image src={vantaLightLogo} alt="Vanta Trading Bot" className="block w-full dark:hidden" />
+              <Image src={vantaDarkLogo} alt="Vanta Trading Bot" className="hidden w-full dark:block" />
             </figure>
           </Link>
           {/* close menu btn */}
