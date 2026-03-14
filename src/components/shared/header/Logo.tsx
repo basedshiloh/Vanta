@@ -1,4 +1,4 @@
-import logoDark from '@public/images/shared/logo-dark.svg';
+import vantaDarkLogo from '@public/images/shared/vanta-dark-mode.svg';
 import vantaLightLogo from '@public/images/shared/vanta-light-mode.svg';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -10,13 +10,13 @@ const Logo = () => {
         <span className="sr-only">Home</span>
         <figure className="hidden lg:block lg:max-w-[198px]">
           <Image src={vantaLightLogo} alt="Vanta Trading Bot" className="block dark:hidden" />
-          <Image src={logoDark} alt="Vanta Trading Bot" className="hidden dark:block" />
+          <Image src={vantaDarkLogo} alt="Vanta Trading Bot" className="hidden dark:block" />
         </figure>
 
         {/* mobile logo */}
         <figure className="block max-w-[44px] lg:hidden">
           <Image src={vantaLightLogo} alt="Vanta Trading Bot" className="block w-full dark:hidden" />
-          <Image src={logoDark} alt="Vanta Trading Bot" className="hidden w-full dark:block" />
+          <Image src={vantaDarkLogo} alt="Vanta Trading Bot" className="hidden w-full dark:block" />
         </figure>
       </Link>
     </div>
