@@ -15,6 +15,7 @@ const Preloader = ({ onComplete }: PreloaderProps) => {
   const percentRef = useRef<HTMLSpanElement>(null);
   const centerLogoRef = useRef<HTMLDivElement>(null);
   const revealGroupRef = useRef<HTMLDivElement>(null);
+  const whiteLogoRef = useRef<HTMLDivElement>(null);
   const quoteRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
@@ -47,17 +48,19 @@ const Preloader = ({ onComplete }: PreloaderProps) => {
         '-=0.2',
       );
 
-      // Phase 2: Zoom black logo + transition background to black (logo scales as if becoming new bg)
+      // Phase 2: Zoom black logo first (scale fully before fade)
       tl.to(
         centerLogoRef.current,
         {
-          scale: 8,
-          opacity: 0.15,
-          duration: 0.7,
+          scale: 18,
+          opacity: 0.2,
+          duration: 0.9,
           ease: 'power2.inOut',
         },
         '-=0.1',
       );
+
+      // Fade background to black only after logo has scaled fully
       tl.to(
         containerRef.current,
         {
@@ -65,19 +68,24 @@ const Preloader = ({ onComplete }: PreloaderProps) => {
           duration: 0.6,
           ease: 'power2.inOut',
         },
-        '-=0.7',
       );
 
-      // Phase 3: Hide zoomed logo, reveal quote
+      // Phase 3: Hide zoomed logo, show white logo then quote
       tl.set(centerLogoRef.current, { opacity: 0 });
       tl.set(revealGroupRef.current, { opacity: 1 });
+      tl.set(whiteLogoRef.current, { opacity: 0 });
       tl.set(quoteRef.current, { opacity: 0, y: 24 });
+      tl.to(whiteLogoRef.current, {
+        opacity: 1,
+        duration: 0.4,
+        ease: 'power2.out',
+      });
       tl.to(quoteRef.current, {
         opacity: 1,
         y: 0,
         duration: 0.6,
         ease: 'power2.out',
-      });
+      }, '-=0.2');
 
       // Phase 4: Fade out preloader
       tl.to(
@@ -112,14 +120,17 @@ const Preloader = ({ onComplete }: PreloaderProps) => {
 
       <span
         ref={percentRef}
-        className="fixed bottom-8 right-8 z-10 text-2xl font-medium tabular-nums text-black md:bottom-12 md:right-12 md:text-3xl">
+        className="fixed bottom-8 right-8 z-10 text-4xl font-bold tabular-nums text-black md:bottom-12 md:right-12 md:text-5xl lg:text-6xl">
         0
       </span>
 
-      {/* Phase 2: Quote on black background */}
+      {/* Phase 2: White logo + quote on black background */}
       <div
         ref={revealGroupRef}
-        className="absolute inset-0 flex flex-col items-center justify-center px-8 opacity-0 pointer-events-none">
+        className="absolute inset-0 flex flex-col items-center justify-center gap-8 px-8 opacity-0 pointer-events-none">
+        <div ref={whiteLogoRef} className="opacity-0">
+          <Image src={vantaLogo} alt="Vanta" width={100} height={100} />
+        </div>
         <div
           ref={quoteRef}
           className="max-w-2xl text-center text-3xl font-medium leading-tight text-white md:text-4xl lg:text-5xl"
