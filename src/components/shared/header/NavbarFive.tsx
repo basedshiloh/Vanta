@@ -69,9 +69,11 @@ const NavbarFive: FC<NavbarFiveProps> = ({ className, megaMenuColor }) => {
             </ul>
           </nav>
           <NavCTAButton
-            href="/signup-01"
+            href="https://t.me/topia_on_bot"
+            target="_blank"
+            rel="noopener noreferrer"
             btnClassName={'btn-primary hover:btn-secondary dark:hover:btn-accent'}
-            label="Get started"
+            label="Start trading"
           />
           {/* mobile menu btn */}
           <MobileMenuButton />

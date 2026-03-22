@@ -28,7 +28,9 @@ const Hero = () => {
               <RevealAnimation delay={0.4} direction="left">
                 <li className="w-full sm:w-auto text-center sm:text-left">
                   <LinkButton
-                    href="/our-services-01"
+                    href="https://t.me/topia_on_bot"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="btn btn-primary hover:btn-secondary dark:hover:btn-accent btn-lg md:btn-xl md:w-auto w-[90%] mx-auto md:mx-0">
                     Start Trading
                   </LinkButton>
@@ -37,7 +39,7 @@ const Hero = () => {
               <RevealAnimation delay={0.5} direction="left">
                 <li className="w-full sm:w-auto text-center sm:text-left">
                   <LinkButton
-                    href="/contact-us"
+                    href="/our-services-01"
                     className="btn btn-white dark:btn-white-dark hover:btn-primary btn-lg md:btn-xl md:w-auto w-[90%] mx-auto md:mx-0">
                     Learn More
                   </LinkButton>
