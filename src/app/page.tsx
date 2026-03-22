@@ -3,7 +3,6 @@ import Feature from '@/components/homepage-22/Feature';
 import FeatureV2 from '@/components/homepage-22/FeatureV2';
 import Hero from '@/components/homepage-32/Hero';
 import Services from '@/components/homepage-32/Services';
-import Services22 from '@/components/homepage-22/Services';
 import Steps from '@/components/homepage-22/Steps';
 import Testimonial from '@/components/homepage-33/Testimonial';
 import FooterThree from '@/components/shared/footer/FooterThree';
@@ -42,7 +41,6 @@ const Homepage = () => {
         <Steps />
         <Feature />
         <FeatureV2 />
-        <Services22 />
         <Testimonial />
         <CTA />
       </main>
